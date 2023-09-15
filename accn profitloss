@@ -1,0 +1,18 @@
+n=int(input())
+arr1=list(map(int,input().split()))[:n]
+m=int(input())
+arr2=list(map(int,input().split()))[:m]
+p=int(input())
+a=[]
+for i in arr2:
+    if i in arr1:
+        c=i*p
+        a.append(c)
+        arr1.remove(i)
+    else:
+        c=-(i*p)
+        a.append(c)
+        
+res=sum(a)
+print(res)
+    
